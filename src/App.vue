@@ -981,11 +981,11 @@ onBeforeUnmount(() => {
                 <use href="#i-food" />
               </svg>
             </div>
-            <h3>今天吃什麼？有解。</h3>
+            <h3>今天吃什麼？有解</h3>
             <p>
               看看熱食部今天的菜色與價格，
               <br />
-              或找找附近正在營業的口袋名單。
+              或找找附近正在營業的口袋名單
             </p>
             <div class="mini-meal">
               <svg aria-hidden="true">
@@ -1005,11 +1005,11 @@ onBeforeUnmount(() => {
                 <use href="#i-bike" />
               </svg>
             </div>
-            <h3>放學，順路回家。</h3>
+            <h3>放學，順路回家</h3>
             <p>
               收藏常用 YouBike 與捷運站點，
               <br />
-              出發前，先看看交通資訊。
+              出發前，先看看交通資訊
             </p>
             <div class="mini-route">
               <span class="route-label">
@@ -1028,8 +1028,8 @@ onBeforeUnmount(() => {
     <section class="try-section wrap" aria-labelledby="try-title">
       <div class="try-header">
         <div>
-          <h3 id="try-title">先點點看，再放進口袋。</h3>
-          <p>切換上方手機的分頁，看看 CK APP 能幫上什麼忙。</p>
+          <h3 id="try-title">先點點看，再放進口袋</h3>
+          <p>切換上方手機的分頁，看看 CK APP 能幫上什麼忙</p>
           <a
             class="try-link"
             href="#app-preview"
@@ -1122,16 +1122,15 @@ onBeforeUnmount(() => {
           <h2 class="section-title" id="about-title">
             由建中生打造，
             <br />
-            為建中生活而生。
+            為建中生活而生
           </h2>
           <p class="copy">
-            CK APP 從 2024 年開始，由建中學生 Kimi 與 Diego
-            發起。我們把自己每天遇到的小麻煩，變成一個個實用功能，並和班聯會資訊股一起持續維護。
+            CK APP 從 2024 年開始，由建中學生 Kimi 與 Diego 發起<br />我們把自己每天遇到的小麻煩，變成一個個實用功能，並和班聯會資訊股一起持續維護
             <br />
             <br />
             有想法、有建議，或也想一起讓校園生活更好？
             <br />
-            我們很樂意聽聽。
+            我們很樂意聽聽
           </p>
           <div class="about-links">
             <a class="text-link" href="mailto:ckappofficial@gmail.com">
@@ -1158,11 +1157,11 @@ onBeforeUnmount(() => {
     <section class="faq wrap" aria-labelledby="faq-title">
       <div>
         <div class="section-number">05 / 你可能想知道</div>
-        <h2 class="section-title" id="faq-title">幾個小問題。</h2>
+        <h2 class="section-title" id="faq-title">幾個小問題</h2>
         <p class="copy">
           從下載到第一天使用，
           <br />
-          先幫你把常見的疑問整理好。
+          先幫你把常見的疑問整理好
         </p>
       </div>
       <div class="faq-list">
@@ -1174,8 +1173,7 @@ onBeforeUnmount(() => {
             </svg>
           </summary>
           <p>
-            CK APP
-            可以免費下載與使用。我們希望讓更多建中學生，輕鬆找到每天需要的校園資訊。
+            CK APP 可以免費下載與使用<br />我們希望讓更多建中學生，輕鬆找到每天需要的校園資訊
           </p>
         </details>
         <details>
@@ -1186,8 +1184,7 @@ onBeforeUnmount(() => {
             </svg>
           </summary>
           <p>
-            可以！iPhone 請從 App Store 下載，Android 請從 Google Play
-            下載。點選下方對應的商店按鈕，就能前往下載頁面。
+            可以！iPhone 請從 App Store 下載，Android 請從 Google Play 下載<br />點選下方對應的商店按鈕，就能前往下載頁面
           </p>
         </details>
         <details>
@@ -1198,8 +1195,7 @@ onBeforeUnmount(() => {
             </svg>
           </summary>
           <p>
-            開啟
-            App，選擇你的年級與班級，就可以查看課表與今天的安排。也可以先逛逛，之後再到設定裡選擇班級。
+            開啟 App，選擇你的年級與班級，就可以查看課表與今天的安排<br />也可以先逛逛，之後再到設定裡選擇班級
           </p>
         </details>
         <details>
@@ -1226,7 +1222,7 @@ onBeforeUnmount(() => {
             >
               Instagram @ckappofficial
             </a>
-            聯絡我們。
+            聯絡我們
           </p>
         </details>
       </div>
@@ -1235,11 +1231,11 @@ onBeforeUnmount(() => {
       <div class="wrap download-inner">
         <div>
           <div class="eyebrow">YOUR NEXT SCHOOL DAY, A LITTLE EASIER.</div>
-          <h2 id="download-title">明天到校，帶上 CK APP。</h2>
+          <h2 id="download-title">明天到校，帶上 CK APP</h2>
           <p>
-            選好班級，開始你的今天。
+            選好班級，開始你的今天
             <br />
-            你的校園助理，現在就放進口袋。
+            你的校園助理，現在就放進口袋
           </p>
         </div>
         <div class="download-store-wrap">
@@ -1284,7 +1280,7 @@ onBeforeUnmount(() => {
     <div class="footer-inner">
       <div class="footer-brand">
         <a class="brand-word" href="#" aria-label="回到頁首"> CK APP ↗ </a>
-        <small> 你的校園助理。 </small>
+        <small> 你的校園助理 </small>
       </div>
       <div class="footer-links">
         <a href="https://cksc.tw/" target="_blank" rel="noopener noreferrer">
