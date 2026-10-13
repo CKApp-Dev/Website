@@ -30,8 +30,8 @@ function clearFilters() {
       <div class="hub-hero-copy">
         <a :href="homeHref" class="feature-back"><span aria-hidden="true">←</span> 回到首頁</a>
         <p class="feature-eyebrow">THE CK APP GUIDE · 功能指南</p>
-        <h1 id="hub-title">校園生活的每一面，<br><span>都有一個好幫手。</span></h1>
-        <p class="hub-lead">從上課前的第一眼，到放學後的回家路。認識 CK APP 的每一項功能，找到適合你的使用方式。</p>
+        <h1 id="hub-title">校園生活的每一面，<br><span>都有一個好幫手</span></h1>
+        <p class="hub-lead">從上課前的第一眼，到放學後的回家路<br />認識 CK APP 的每一項功能，找到適合你的使用方式</p>
         <a href="#feature-library" class="hub-explore">探索全部 {{ features.length }} 項功能 <svg aria-hidden="true"><use href="#i-arrow" /></svg></a>
       </div>
       <div class="hub-guide" aria-label="依生活情境探索三大類功能">
@@ -41,7 +41,7 @@ function clearFilters() {
           <div><strong>{{ group.label }}</strong><p>{{ group.description }}</p></div>
           <svg aria-hidden="true"><use :href="`#i-${index === 0 ? 'grid' : index === 1 ? 'school' : 'heart'}`" /></svg>
         </div>
-        <div class="hub-guide-foot"><span class="hub-guide-dot" aria-hidden="true"></span> 一個 App，陪你過好每一天。</div>
+        <div class="hub-guide-foot"><span class="hub-guide-dot" aria-hidden="true"></span> 一個 App，陪你過好每一天</div>
       </div>
     </section>
 
@@ -57,7 +57,7 @@ function clearFilters() {
         <button type="button" :aria-pressed="activeGroup === 'all'" @click="activeGroup = 'all'">全部功能 <span>{{ features.length }}</span></button>
         <button v-for="group in featureGroups" :key="group.id" type="button" :aria-pressed="activeGroup === group.id" @click="activeGroup = group.id">{{ group.label }} <span>{{ features.filter(feature => feature.group === group.id).length }}</span></button>
       </div>
-      <div class="library-context"><p>{{ currentGroup?.description ?? '想把校園日常安排得更順手？從這裡開始。' }}</p><p role="status" aria-live="polite">顯示 {{ filteredFeatures.length }} 項功能</p></div>
+      <div class="library-context"><p>{{ currentGroup?.description ?? '想把校園日常安排得更順手？從這裡開始' }}</p><p role="status" aria-live="polite">顯示 {{ filteredFeatures.length }} 項功能</p></div>
       <div v-if="filteredFeatures.length" class="feature-card-grid">
         <a v-for="feature in filteredFeatures" :key="feature.slug" :href="featureHref(feature.slug)" class="feature-guide-card" :class="`feature-group-${feature.group}`">
           <div class="feature-card-top"><span class="feature-card-icon"><svg aria-hidden="true"><use :href="`#${feature.icon}`" /></svg></span><span class="feature-card-category">{{ groupLabel(feature.group) }}</span></div>
@@ -67,9 +67,9 @@ function clearFilters() {
         </a>
       </div>
       <div v-else class="feature-empty">
-        <svg aria-hidden="true"><use href="#i-search" /></svg><h3>還沒找到符合的功能</h3><p>試試更短的關鍵字，或清除篩選看看所有功能。</p><button type="button" @click="clearFilters">清除搜尋與篩選 <span aria-hidden="true">↗</span></button>
+        <svg aria-hidden="true"><use href="#i-search" /></svg><h3>還沒找到符合的功能</h3><p>試試更短的關鍵字，或清除篩選看看所有功能</p><button type="button" @click="clearFilters">清除搜尋與篩選 <span aria-hidden="true">↗</span></button>
       </div>
-      <div class="feature-library-note"><svg aria-hidden="true"><use href="#i-check" /></svg><p>各頁附有功能說明、使用步驟與常見問題。介面示意僅供介紹，實際內容以 App 顯示為準。</p></div>
+      <div class="feature-library-note"><svg aria-hidden="true"><use href="#i-check" /></svg><p>各頁附有功能說明、使用步驟與常見問題<br />介面示意僅供介紹，實際內容以 App 顯示為準</p></div>
     </section>
   </main>
 </template>

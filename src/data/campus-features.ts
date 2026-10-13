@@ -374,7 +374,7 @@ export const campusFeatures: FeaturePage[] = [
     tagline: '找合作店家，把學生福利用起來',
     description: '從建中周邊到北車、西門，依地區開啟建北特約店家資訊。使用優惠前，先確認店家條件，並準備學生證或教師證',
     group: 'campus',
-    icon: 'i-heart',
+    icon: 'i-store',
     entry: '校園 → 學生福利 → 建北特約',
     highlights: ['四個地區快速入口', '連到特約官方資訊', '使用資格提醒'],
     preview: {
@@ -437,7 +437,7 @@ export const campusFeatures: FeaturePage[] = [
     tagline: '校慶的紀念，從這裡找到',
     description: '從校園分頁進入校慶紀念品商店，在 App 內瀏覽商店網站，也能接續目前頁面改用瀏覽器查看',
     group: 'campus',
-    icon: 'i-school',
+    icon: 'i-bag',
     entry: '校園 → 學生福利 → 校慶紀念品',
     highlights: ['商店網站直接開啟', '在 App 內瀏覽', '接續目前頁面到瀏覽器'],
     preview: {
@@ -493,7 +493,7 @@ export const campusFeatures: FeaturePage[] = [
     tagline: '舞會門票資訊，從校園直接進入',
     description: '透過 CK PARTY NIGHT 入口，在 App 內開啟建中舞會門票網站。活動資訊、門票開放狀態與操作方式，依網站當時提供的內容查看',
     group: 'campus',
-    icon: 'i-school',
+    icon: 'i-ticket',
     entry: '校園 → 學生福利 → 建中舞會門票',
     highlights: ['CK PARTY NIGHT 入口', '在 App 內開啟門票網站', '可接續到外部瀏覽器'],
     preview: {
@@ -549,7 +549,7 @@ export const campusFeatures: FeaturePage[] = [
     tagline: '選項交給你，最後一票交給小幫手',
     description: '午餐、活動或下一步都難以決定？每行輸入一個選項，按下「幫我選」，小幫手就會隨機給出一個答案，也能隨時再選一次',
     group: 'campus',
-    icon: 'i-heart',
+    icon: 'i-help',
     entry: '校園 → 工具 → 選擇障礙小幫手',
     highlights: ['每行輸入一個選項', '隨機抽選與再次選擇', '結果可選取複製'],
     preview: {

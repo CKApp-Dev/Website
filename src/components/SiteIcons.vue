@@ -1,6 +1,46 @@
 <template>
   <svg class="icon-defs" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
-    <defs><symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></symbol><symbol id="i-bell" viewBox="0 0 24 24"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M9 21h6"/></symbol><symbol id="i-settings" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="m10 3-1 3-3 1-3 3 2 2-1 3 3 3 3-1 2 2 3-1 1-3 3-1 1-3-2-2 1-3-3-3-3 1-2-2Z"/></symbol>
+    <defs>
+      <symbol id="i-store" viewBox="0 0 24 24">
+        <path
+          d="M3 10v11h18V10M2 10l2-7h16l2 7M2 10c0 4 5 4 5 0 0 4 5 4 5 0 0 4 5 4 5 0 0 4 5 4 5 0M8 21v-7h8v7M8 3l-1 7m9-7 1 7"
+        />
+      </symbol>
+      <symbol id="i-bag" viewBox="0 0 24 24">
+        <path d="M4 8h16l1 13H3L4 8Zm4 0V6a4 4 0 0 1 8 0v2" />
+      </symbol>
+      <symbol id="i-ticket" viewBox="0 0 24 24">
+        <path
+          d="M3 5h18v5a2 2 0 0 0 0 4v5H3v-5a2 2 0 0 0 0-4V5Zm12 0v3m0 3v2m0 3v3"
+        />
+      </symbol>
+      <symbol id="i-help" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="9" />
+        <path d="M9 9a3 3 0 0 1 6 0c0 2-3 2-3 4m0 3h.01" />
+      </symbol>
+      <symbol id="i-sun-fill" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="4" fill="currentColor" />
+        <path
+          d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"
+        />
+      </symbol>
+      <symbol id="i-grid-fill" viewBox="0 0 24 24">
+        <rect x="3" y="4" width="18" height="16" rx="2" />
+        <path d="M3 9h18M9 4v16m6-16v16M3 14h18" stroke-width="2.5" />
+      </symbol>
+      <symbol id="i-search" viewBox="0 0 24 24">
+        <circle cx="10.5" cy="10.5" r="6.5" />
+        <path d="m16 16 5 5" />
+      </symbol>
+      <symbol id="i-bell" viewBox="0 0 24 24">
+        <path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M9 21h6" />
+      </symbol>
+      <symbol id="i-settings" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="3" />
+        <path
+          d="m10 3-1 3-3 1-3 3 2 2-1 3 3 3 3-1 2 2 3-1 1-3 3-1 1-3-2-2 1-3-3-3-3 1-2-2Z"
+        />
+      </symbol>
       <symbol id="i-arrow" viewBox="0 0 24 24">
         <path d="M5 12h14m-5-5 5 5-5 5" />
       </symbol>
@@ -76,6 +116,12 @@
         <path
           d="M2 7a16 16 0 0 1 20 0M5 11a11 11 0 0 1 14 0m-10 4a5 5 0 0 1 6 0m-3 4h.01"
         />
+      </symbol>
+      <symbol id="i-down" viewBox="0 0 24 24">
+        <path d="M12 4v16m-6-6 6 6 6-6" />
+      </symbol>
+      <symbol id="i-close" viewBox="0 0 24 24">
+        <path d="m6 6 12 12M6 18 18 6" />
       </symbol>
     </defs>
   </svg>

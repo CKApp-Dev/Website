@@ -15,6 +15,8 @@ The landing page is in `src/pages/HomePage.vue`. The feature overview and detail
 
 Styles are in `src/css/app.css` and `src/css/feature-pages.css`. Typed feature content is maintained in `src/data/core-features.ts` and `src/data/campus-features.ts`.
 
+The design uses campus-inspired blue, an interactive phone preview, and semantic colors that follow system light/dark appearance. Layouts respond to enlarged text, keyboard focus, reduced motion, and increased contrast. The review, tokens, and verification record are in [docs/design-review.md](docs/design-review.md).
+
 Check types, build the website, and preview the production build:
 
 ```sh
@@ -47,6 +49,7 @@ The build emits a separate `index.html` for the overview and every detail page, 
 - The App Store and Google Play buttons link to CK APP's official download pages.
 - The student council website is linked at `https://cksc.tw/`.
 - The phone preview, class schedule, menu, and transportation information are feature demonstrations, labeled as such on the page.
+- App examples share `AppInterfacePreview.vue` and the `App*Preview.vue` components. They follow CK APP's native iOS source layouts, with isolated light/dark tokens in `src/css/app-previews.css`; see [the UI consistency record](docs/app-ui-consistency.md).
 - `public/assets/ck-app-icon.png` uses an existing CK APP brand asset.
 
 Contact: ckappofficial@gmail.com · [Instagram](https://www.instagram.com/ckappofficial/)

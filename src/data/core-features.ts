@@ -272,7 +272,7 @@ export const coreFeatures: FeaturePage[] = [
     tagline: '從班級開始，調整成自己的校園助理',
     description: '第一次使用先選班級，之後隨時調整首頁區塊、行事曆年級篩選與公告通知，也能從關於頁找到版本資訊和聯絡方式',
     group: 'personal',
-    icon: 'i-school',
+    icon: 'i-settings',
     entry: '首次開啟的「你是哪一班？」；之後從「今天」右上角班級按鈕進入設定',
     highlights: ['依年級選班級載入課表', '首頁與年級篩選自訂', '通知、關於與資料重設'],
     preview: {

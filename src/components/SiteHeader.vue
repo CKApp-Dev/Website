@@ -1,91 +1,114 @@
 <script setup lang="ts">
-import { onBeforeUnmount, onMounted, ref } from 'vue'
-import { QBtn } from 'quasar'
-import { homeHref, featuresHref } from '../data/features'
-defineProps<{isFeaturePage:boolean}>()
-const baseUrl=import.meta.env.BASE_URL
-const mobileMenu=ref(false)
-const navigation=ref<HTMLElement|null>(null)
-const menuToggle=ref<InstanceType<typeof QBtn>|null>(null)
-function closeMenu():void {mobileMenu.value=false}
-function handleOutsideClick(event:MouseEvent):void {if(event.target instanceof Node&&!navigation.value?.contains(event.target))closeMenu()}
-function handleEscape(event:KeyboardEvent):void {if(event.key==='Escape'&&mobileMenu.value){closeMenu();(menuToggle.value?.$el as HTMLElement|undefined)?.focus()}}
-onMounted(()=>{document.addEventListener('click',handleOutsideClick);document.addEventListener('keydown',handleEscape)})
-onBeforeUnmount(()=>{document.removeEventListener('click',handleOutsideClick);document.removeEventListener('keydown',handleEscape)})
+import { onBeforeUnmount, onMounted, ref } from "vue";
+import { QBtn } from "quasar";
+import { featuresHref, homeHref } from "../data/features";
+
+defineProps<{ isFeaturePage: boolean }>();
+
+const baseUrl = import.meta.env.BASE_URL;
+const mobileMenu = ref(false);
+const navigation = ref<HTMLElement | null>(null);
+const menuToggle = ref<InstanceType<typeof QBtn> | null>(null);
+
+function closeMenu(): void {
+  mobileMenu.value = false;
+}
+
+function handleOutsideClick(event: MouseEvent): void {
+  if (event.target instanceof Node && !navigation.value?.contains(event.target))
+    closeMenu();
+}
+
+function handleEscape(event: KeyboardEvent): void {
+  if (event.key !== "Escape" || !mobileMenu.value) return;
+  closeMenu();
+  (menuToggle.value?.$el as HTMLElement | undefined)?.focus();
+}
+
+function handleMenuFocus(event: FocusEvent): void {
+  if (
+    event.relatedTarget instanceof Node &&
+    !navigation.value?.contains(event.relatedTarget)
+  )
+    closeMenu();
+}
+
+onMounted(() => {
+  document.addEventListener("click", handleOutsideClick);
+  document.addEventListener("keydown", handleEscape);
+});
+
+onBeforeUnmount(() => {
+  document.removeEventListener("click", handleOutsideClick);
+  document.removeEventListener("keydown", handleEscape);
+});
 </script>
 
 <template>
   <header class="header">
-    <nav ref="navigation" class="nav wrap" aria-label="主要導覽">
+    <nav
+      ref="navigation"
+      class="nav wrap"
+      aria-label="主要導覽"
+      @focusout="handleMenuFocus"
+    >
       <a :href="homeHref" class="brand" aria-label="CK APP 首頁">
         <img
-          class="brand-icon"
           :src="`${baseUrl}assets/ck-app-icon.png`"
           alt=""
-          width="41"
-          height="41"
+          width="42"
+          height="42"
         />
-        <div>
-          <div class="brand-word">
-            CK APP
-            <span style="font-size: 13px; margin-left: 3px"> ↗ </span>
-          </div>
-          <div class="brand-sub">你的校園助理</div>
-        </div>
+        <span class="brand-word"
+          >CK APP OFFICIAL</span
+        >
       </a>
-      <QBtn
-        ref="menuToggle"
-        class="menu-toggle"
-        flat
-        dense
-        no-caps
-        :ripple="false"
-        :aria-label="mobileMenu ? '關閉導覽選單' : '開啟導覽選單'"
-        :aria-expanded="mobileMenu"
-        aria-controls="nav-links"
-        @click="mobileMenu = !mobileMenu"
-      >
-        <svg aria-hidden="true">
-          <use href="#i-menu" />
-        </svg>
-      </QBtn>
-      <div class="nav-links" :class="{ 'is-open': mobileMenu }" id="nav-links">
+      <div class="nav-actions">
+        <a href="#download" class="mobile-download">
+          免費下載<svg aria-hidden="true"><use href="#i-down" /></svg>
+        </a>
         <QBtn
-          :href="featuresHref" :aria-current="isFeaturePage ? 'page' : undefined"
-          class="nav-link"
+          ref="menuToggle"
+          class="menu-toggle"
           flat
-          dense
           no-caps
           :ripple="false"
-          @click="closeMenu"
+          :aria-label="mobileMenu ? '關閉導覽選單' : '開啟導覽選單'"
+          :aria-expanded="mobileMenu"
+          aria-controls="nav-links"
+          @click="mobileMenu = !mobileMenu"
         >
-          完整功能
+          <svg aria-hidden="true">
+            <use :href="mobileMenu ? '#i-close' : '#i-menu'" />
+          </svg>
         </QBtn>
-        <QBtn
-          :href="`${homeHref}#about`"
+      </div>
+      <div id="nav-links" class="nav-links" :class="{ 'is-open': mobileMenu }">
+        <a
+          :href="featuresHref"
           class="nav-link"
-          flat
-          dense
-          no-caps
-          :ripple="false"
+          :aria-current="isFeaturePage ? 'page' : undefined"
+          @click="closeMenu"
+          >功能指南</a
+        >
+        <a :href="`${homeHref}#about`" @click="closeMenu">關於我們</a>
+        <a
+          href="#download"
+          class="button button-primary nav-download"
           @click="closeMenu"
         >
-          關於我們
-        </QBtn>
-        <QBtn
-          href="https://cksc.tw/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="nav-link"
-          flat
-          dense
-          no-caps
-          :ripple="false"
-          @click="closeMenu"
-        >
-          班聯會官網 ↗
-        </QBtn>
+          下載 CK APP<svg aria-hidden="true"><use href="#i-down" /></svg>
+        </a>
       </div>
     </nav>
   </header>
 </template>
+
+<style scoped>
+.nav-link[aria-current="page"] {
+  color: var(--blue);
+  font-weight: 650;
+  text-decoration: underline;
+  text-underline-offset: 0.35em;
+}
+</style>

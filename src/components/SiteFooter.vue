@@ -1,43 +1,80 @@
 <script setup lang="ts">
-import {homeHref,featuresHref} from '../data/features'
+import { featuresHref, homeHref } from "../data/features";
+
+const campusLinks = [
+  { title: "班聯會官網", url: "https://cksc.tw/" },
+  { title: "校慶紀念品", url: "https://souvenir.cksc.tw/" },
+  { title: "建中舞會購票", url: "https://tickets.cksc.tw/" },
+  { title: "建北特約", url: "https://cktfgpromo.cksc.tw/" },
+];
+const developers = [
+  { name: "Deigo Peng", role: "Creator" },
+  { name: "Kimi Yang", role: "Creator" },
+  { name: "Nathan Lee", role: "Maintainer" },
+  { name: "Chris Sun", role: "Maintainer" },
+  { name: "Dong Chen", role: "Maintainer" },
+];
 </script>
+
 <template>
   <footer class="footer wrap">
-    <div class="footer-inner">
+    <div class="footer-top">
       <div class="footer-brand">
-        <a class="brand-word" :href="homeHref" aria-label="回到頁首"> CK APP ↗ </a>
-        <small> 你的校園助理 </small>
+        <a :href="homeHref" class="brand-word" aria-label="CK APP 首頁"
+          >CK APP</a
+        >
+        <p>Made by students, for students.</p>
       </div>
-      <div class="footer-links"><a :href="featuresHref">完整功能</a>
-        <a href="https://cksc.tw/" target="_blank" rel="noopener noreferrer">
-          班聯會官網 ↗
+      <div class="footer-group">
+        <h2>功能與校園</h2>
+        <a :href="featuresHref"
+          >功能指南<svg aria-hidden="true"><use href="#i-arrow" /></svg
+        ></a>
+        <a
+          v-for="link in campusLinks"
+          :key="link.title"
+          :href="link.url"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {{ link.title
+          }}<svg aria-hidden="true"><use href="#i-up-right" /></svg>
         </a>
+      </div>
+      <div class="footer-group">
+        <h2>保持聯絡</h2>
         <a
           href="https://www.instagram.com/ckappofficial/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          CK APP Instagram ↗
+          CK APP Instagram<svg aria-hidden="true">
+            <use href="#i-up-right" />
+          </svg>
         </a>
-        <a href="https://www.instagram.com/cksc.81st/" target="_blank" rel="noopener noreferrer">
-          CKSC Instagram ↗
+        <a
+          href="https://www.instagram.com/cksc.81st/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          CKSC Instagram<svg aria-hidden="true"><use href="#i-up-right" /></svg>
         </a>
-        <a href="https://souvenir.cksc.tw/" target="_blank" rel="noopener noreferrer">
-          校慶紀念品 ↗
-        </a>
-        <a href="https://tickets.cksc.tw/" target="_blank" rel="noopener noreferrer">
-          建中舞會購票 ↗
-        </a>
-        <a href="https://cktfgpromo.cksc.tw/" target="_blank" rel="noopener noreferrer">
-          建北特約 ↗
-        </a>
-        <a href="mailto:ckappofficial@gmail.com"> 聯絡我們 ↗ </a>
+        <a href="mailto:ckappofficial@gmail.com"
+          >聯絡我們<svg aria-hidden="true"><use href="#i-up-right" /></svg
+        ></a>
       </div>
     </div>
+    <div class="footer-team">
+      <span>Developers</span>
+      <ul>
+        <li v-for="developer in developers" :key="developer.name">
+          {{ developer.name }}<span>{{ developer.role }}</span>
+        </li>
+      </ul>
+    </div>
     <div class="copyright">
-      <span> © 2026 CK APP Official. Made by students, for students. </span>
-      <span class="footer-location"> TAIPEI, TAIWAN · CKHS </span>
-      <span class="footer-credits">Developers: Deigo Peng(Creator), Kimi Yang(Creator), Nathan Lee(Maintainer), Chris Sun(Maintainer), Dong Chen(Maintainer) </span>
+      <span>© 2026 CK APP Official. All rights reserved.</span
+      ><span>Taipei Municipal Chien Kuo High School</span>
     </div>
   </footer>
 </template>
