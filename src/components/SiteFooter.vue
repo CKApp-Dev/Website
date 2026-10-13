@@ -12,6 +12,7 @@ const developers = [
   { name: "Kimi Yang", role: "Creator" },
   { name: "Nathan Lee", role: "Maintainer" },
   { name: "Chris Sun", role: "Maintainer" },
+  { name: "Jim Tang", role: "Maintainer" },
   { name: "Dong Chen", role: "Maintainer" },
 ];
 </script>
