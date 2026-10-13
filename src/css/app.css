@@ -2647,3 +2647,24 @@ details p {
     gap:  18px;
   }
 }
+
+
+/* Shared navigation and links into the detailed function guide. */
+.nav-link[aria-current="page"] { color: var(--blue); text-decoration: underline; text-underline-offset: 7px; }
+a.feature-item { display: block; transition: background .2s; }
+a.feature-item:hover { background: #edf0e9; }
+.feature-read-more { display: inline-flex; align-items: center; gap: 8px; margin-top: 22px; font-size: 12px; font-weight: 650; color: var(--blue); }
+.feature-read-more svg { width: 14px; height: 14px; }
+.features { padding-bottom: 40px; }
+.all-features-link { display: flex; align-items: center; gap: 25px; margin-bottom: 80px; }
+.all-features-link p { font-size: 12px; color: var(--muted); line-height: 1.8; }
+.missing-page { padding-block: 100px; }
+.missing-actions { display: flex; gap: 25px; align-items: center; margin-top: 30px; }
+@media(max-width:640px) { .all-features-link { flex-direction: column; align-items: flex-start; gap: 10px; margin-bottom: 50px; } .missing-page { padding-block: 60px; } }
+
+.footer-links { flex-wrap: wrap; justify-content: flex-end; }
+.copyright { flex-wrap: wrap; }
+.footer-credits { font-size: 9px; line-height: 1.8; text-align: right; max-width: 600px; }
+@media(max-width:640px) { .footer-links { justify-content: flex-start; } .footer-credits { text-align: left; } }
+.copyright span.footer-credits { display: block; }
+@media(max-width:800px) { .copyright .footer-location { display: none; } }

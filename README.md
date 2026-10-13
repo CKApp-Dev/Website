@@ -1,17 +1,21 @@
 # CK APP Website
 
-CK APP 的全新形象網站，以 **Quasar、Vue 3、TypeScript 與 CSS** 製作，透過 GitHub Pages 發布。
+The new CK APP marketing website, built with **Quasar, Vue 3, TypeScript, and CSS** and deployed through GitHub Pages.
 
-## 本機開發
+## Local Development
 
-需要 Node.js 24 以上。
+Requires Node.js 24 or later.
 
 ```sh
 npm ci
 npm run dev
 ```
 
-主要頁面位於 `src/App.vue`，樣式位於 `src/css/app.css`。
+The landing page is in `src/pages/HomePage.vue`. The feature overview and detail pages are in `src/pages/FeatureIndex.vue` and `src/pages/FeatureDetail.vue`. Shared navigation, download buttons, and footer components are in `src/components/`.
+
+Styles are in `src/css/app.css` and `src/css/feature-pages.css`. Typed feature content is maintained in `src/data/core-features.ts` and `src/data/campus-features.ts`.
+
+Check types, build the website, and preview the production build:
 
 ```sh
 npm run typecheck
@@ -19,22 +23,30 @@ npm run build
 npm run preview
 ```
 
+## Complete Feature Guide
+
+`/features/` provides a searchable overview with category filters. Fourteen detailed pages cover Today, Timetable, Calendar and tasks, Cafeteria, Nearby food, School news, Student council announcements and notifications, Transport, Partner shops, Souvenirs, Dance tickets, Decision helper, iOS widgets, and Getting started/settings.
+
+Each page includes capabilities, usage steps, relevant limits, FAQs, related features, and clearly labeled interface examples. Content follows the app's actual implementation.
+
 ## GitHub Pages
 
-`.github/workflows/deploy.yml` 會在推送至 `main` 時建置並發布 `dist/`。Pull request 只執行建置驗證。
+`.github/workflows/deploy.yml` builds and deploys `dist/` when changes are pushed to `main`. Pull requests run build validation only.
 
-Repository 的 **Settings → Pages → Source** 設為 **GitHub Actions**。Workflow 會自動讀取 Pages 路徑，支援專案網址與自訂網域。本機也能驗證專案路徑：
+In the repository, set **Settings → Pages → Source** to **GitHub Actions**. The workflow automatically detects the Pages base path and supports both project URLs and custom domains. To test a project base path locally:
 
 ```sh
 BASE_PATH=/Website/ npm run build
-npm run preview
+BASE_PATH=/Website/ npm run preview
 ```
 
-## 內容與素材
+The build emits a separate `index.html` for the overview and every detail page, so direct links and refreshes work on GitHub Pages. It also generates unique page metadata, canonical URLs, a sitemap, and a friendly 404 page. The workflow reads `SITE_ORIGIN` from Pages configuration to support custom domains.
 
-- App Store 與 Google Play 按鈕連結至 CK APP 的正式下載頁面。
-- 班聯會官網連結為 `https://cksc.tw/`。
-- 手機預覽、課表、菜單與交通資訊為功能示意，已在頁面標示。
-- `public/assets/ck-app-icon.png` 使用 CK APP 現有品牌素材。
+## Content and Assets
 
-聯絡：ckappofficial@gmail.com · [Instagram](https://www.instagram.com/ckappofficial/)
+- The App Store and Google Play buttons link to CK APP's official download pages.
+- The student council website is linked at `https://cksc.tw/`.
+- The phone preview, class schedule, menu, and transportation information are feature demonstrations, labeled as such on the page.
+- `public/assets/ck-app-icon.png` uses an existing CK APP brand asset.
+
+Contact: ckappofficial@gmail.com · [Instagram](https://www.instagram.com/ckappofficial/)

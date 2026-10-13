@@ -47,6 +47,7 @@ jobs:
           # Production follows the Pages URL, including a custom domain.
           # Pull requests validate the repository's standard project path.
           BASE_PATH: ${{ steps.pages.outcome == 'success' && format('{0}/', steps.pages.outputs.base_path) || format('/{0}/', github.event.repository.name) }}
+          SITE_ORIGIN: ${{ steps.pages.outputs.origin || 'https://ckapp-dev.github.io' }}
         run: npm run build
 
       - name: Upload GitHub Pages artifact
