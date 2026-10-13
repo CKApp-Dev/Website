@@ -2282,7 +2282,7 @@ details p {
     transform: scale(.84);
     width: 100%;
     margin-top: -10px;
-    margin-bottom: -24px;
+    margin-bottom: 0;
   }
   .phone {
     width: 282px;
