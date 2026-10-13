@@ -1,0 +1,29 @@
+{
+  "name": "ck-app-website",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "The CK APP marketing website, built with Quasar, Vue, TypeScript and CSS.",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "typecheck": "vue-tsc --noEmit",
+    "build": "npm run typecheck && vite build",
+    "preview": "vite preview --host 127.0.0.1"
+  },
+  "engines": {
+    "node": ">=24"
+  },
+  "dependencies": {
+    "quasar": "^2.35.1",
+    "vue": "^3.5.44"
+  },
+  "devDependencies": {
+    "@quasar/vite-plugin": "^2.0.2",
+    "@types/node": "^26.6.5",
+    "@vitejs/plugin-vue": "^6.0.10",
+    "sass-embedded": "^1.105.1",
+    "typescript": "~6.0.3",
+    "vite": "^8.3.4",
+    "vue-tsc": "^3.3.13"
+  }
+}
