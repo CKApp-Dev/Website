@@ -118,7 +118,7 @@ async function selectView(view: View, moveToPreview = false): Promise<void> {
         </p>
         <div class="student-signature">
           <span class="signature-mark" aria-hidden="true">CK</span>
-          <p>Made by students.<br /><strong>For students.</strong></p>
+          <p>Made by students.<br /><strong>For students.</strong></p>          
         </div>
       </div>
       <div
@@ -196,7 +196,6 @@ async function selectView(view: View, moveToPreview = false): Promise<void> {
     >
       <div class="section-heading">
         <div>
-          <p class="eyebrow">把日常放在一起</p>
           <h2 id="features-title">少找一下，<br />多一點自己的時間</h2>
         </div>
         <div class="section-summary">
@@ -235,7 +234,6 @@ async function selectView(view: View, moveToPreview = false): Promise<void> {
     >
       <div class="section-heading">
         <div>
-          <p class="eyebrow">上課以外，也照顧到了</p>
           <h2 id="details-title">不只是一張課表</h2>
         </div>
         <p class="section-copy">從早八到放學，<br />替忙碌的日子留點餘裕</p>
@@ -303,23 +301,20 @@ async function selectView(view: View, moveToPreview = false): Promise<void> {
           <p>FROM OUR CAMPUS, WITH CARE.</p>
         </div>
         <div class="about-copy">
-          <p class="eyebrow">因為我們，也在這裡生活</p>
           <h2 id="about-title">由建中生打造，<br />為建中生活而生</h2>
           <p>
             CK APP 從 2024 年開始，由建中學生 Kimi 與 Diego 發起<br />我們把自己每天遇到的小麻煩，變成一個個實用功能，並和班聯會資訊股一起持續維護
           </p>
           <p>有想法、有建議，或也想一起讓校園生活更好？<br />我們很樂意聽聽</p>
           <a href="mailto:ckappofficial@gmail.com" class="text-link"
-            >和我們聊聊<svg aria-hidden="true"><use href="#i-up-right" /></svg
+            >Contact Us<svg aria-hidden="true"><use href="#i-up-right" /></svg
           ></a>
         </div>
       </div>
     </section>
     <section class="faq section wrap" aria-labelledby="faq-title">
       <div>
-        <p class="eyebrow">開始之前</p>
-        <h2 id="faq-title">幾個小問題</h2>
-        <p class="section-copy">從下載到第一天使用，<br />先幫你把疑問整理好</p>
+        <h2 id="faq-title">FAQ</h2>
       </div>
       <div class="faq-list">
         <details>

@@ -59,9 +59,7 @@ onBeforeUnmount(() => {
           width="42"
           height="42"
         />
-        <span class="brand-word"
-          >CK APP OFFICIAL</span
-        >
+        <span style="margin-left: 7px; font-weight: bold; font-size: 1.25rem;">CK APP</span>
       </a>
       <div class="nav-actions">
         <a href="#download" class="mobile-download">
