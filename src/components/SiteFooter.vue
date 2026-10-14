@@ -27,7 +27,7 @@ const developers = [
         <p>Made by students, for students.</p>
       </div>
       <div class="footer-group">
-        <h2>功能與校園</h2>
+        <h2>LINKS</h2>
         <a :href="featuresHref"
           >功能指南<svg aria-hidden="true"><use href="#i-arrow" /></svg
         ></a>
@@ -43,7 +43,7 @@ const developers = [
         </a>
       </div>
       <div class="footer-group">
-        <h2>保持聯絡</h2>
+        <h2>CONTACT US</h2>
         <a
           href="https://www.instagram.com/ckappofficial/"
           target="_blank"
